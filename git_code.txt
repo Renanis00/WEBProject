@@ -1,9 +1,13 @@
 >git clone (primeira vez)
 
->git pull (atualizar e puxar)
+>git config --global user.email "email@example.com" (configurar email do git)
+
+>git config --global user.name "John Doe"(configurar nome de usuário do git)
 
 >git add <arquivo> (adicionar arquivos para commit)
 
 >git commit
 
 >git push (enviar para o diretório)
+
+>git pull (atualizar e puxar)
