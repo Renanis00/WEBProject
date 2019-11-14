@@ -1,13 +1,20 @@
 >git clone (primeira vez)
 
->git config --global user.email "email@example.com" (configurar email do git)
+>git config --global user.email "email@example.com" (configurar email do git pela primeira vez)
 
->git config --global user.name "John Doe"(configurar nome de usuário do git)
+>git config --global user.name "John Doe"(configurar nome de usuário do git pela primeira vez)
+
+>git remote https://github.com/Renanis00/WEBProject.git master (configurar repositório)
+
+>git init (para iniciar o repositório)
+
+>git pull (atualizar e puxar)
 
 >git add <arquivo> (adicionar arquivos para commit)
 
->git commit
+>git commit -m "exemplo comentários" (commitar e deixar comentário sobre)
 
 >git push (enviar para o diretório)
 
->git pull (atualizar e puxar)
+>exit 
+
