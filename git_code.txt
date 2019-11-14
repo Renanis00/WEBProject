@@ -4,7 +4,7 @@
 
 >git config --global user.name "John Doe"(configurar nome de usuário do git única vez)
 
->git remote https://github.com/Renanis00/WEBProject.git master (configurar repositório única vez)
+>git remote add https://github.com/Renanis00/WEBProject.git master (configurar repositório única vez)
 
 >git init (para iniciar o repositório)
 
