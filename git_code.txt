@@ -1,14 +1,18 @@
->git clone (primeira vez)
+>git clone https://github.com/Renanis00/WEBProject (única vez)
 
->git config --global user.email "email@example.com" (configurar email do git pela primeira vez)
+>git config --global user.email "email@example.com" (configurar email do git única vez)
 
->git config --global user.name "John Doe"(configurar nome de usuário do git pela primeira vez)
+>git config --global user.name "John Doe"(configurar nome de usuário do git única vez)
 
->git remote https://github.com/Renanis00/WEBProject.git master (configurar repositório)
+>git remote https://github.com/Renanis00/WEBProject.git master (configurar repositório única vez)
 
 >git init (para iniciar o repositório)
 
 >git pull (atualizar e puxar)
+
+~~~~~~~~~~~~~~~~ FAZENDO AS ALTERAÇÕES ~~~~~~~~~~~~~~~~~ 
+
+>git status (para ver quais os arquivos devem ser adicionados)
 
 >git add <arquivo> (adicionar arquivos para commit)
 
