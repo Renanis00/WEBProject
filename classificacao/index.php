@@ -1,8 +1,8 @@
 <?php
 
-include_once 'ator.php';
+include_once 'classificacoes.php';
 
-$atores = Ator::recuperarTodos();
+$classificacoes = Classificacao::recuperarTodos();
 
 include_once '../cabecalho.php';
 ?>
@@ -12,7 +12,7 @@ include_once '../cabecalho.php';
 
     		<div class="box box-danger">
     			<div class="box-header with-border">
-    				<h3 class="box-title">Atores / Atrizes</h3>
+    				<h3 class="box-title">Classificações</h3>
     			</div>
     			<div class="box-body">
     				<div class="row">
@@ -23,20 +23,19 @@ include_once '../cabecalho.php';
                                 <tr>
                                     <td>Ações</td>
                                     <td>ID</td>
-                                    <td>Nome</td>
-                                    <td>Filmes</td>
+                                    <td>Classificações</td>
+                                    
                                 </tr>
                                 <?php
-                                foreach ($atores as $ator) {
+                                foreach ($classificacoes as $classificacao) {
                                     echo "
                 <tr>
                     <td>
-                        <a class='trash' href='processamento.php?acao=deletar&id_ator={$ator['id_ator']}'><scan class='fa fa-trash'></scan></a>
-                        <a href='formulario.php?id_ator={$ator['id_ator']}'><scan class='fa fa-edit'></scan></a>
+                        <a class='trash' href='processamento.php?acao=deletar&id_classificacao={$classificacao['id_classificacao']}'><scan class='fa fa-trash'></scan></a>
+                        <a href='formulario.php?id_classificacao={$classificacao['id_classificacao']}'><scan class='fa fa-edit'></scan></a>
                     </td>
-                    <td>{$ator['id_ator']}</td>
-                    <td>{$ator['nome_ator']}</td>
-                    <td>{$ator['filmes_ator']}</td>
+                    <td>{$classificacao['id_classificacao']}</td>
+                    <td>{$classificacao['nome_classificacao']}</td>
                 </tr>
             ";
                                 }

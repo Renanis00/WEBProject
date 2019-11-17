@@ -18,7 +18,8 @@ class Conexao {
     }
 
 	public function conectar()
-	{	$this->conexao = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db . ';charset=utf8', $this->user, $this->password);
+	{
+		$this->conexao = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db . ';charset=utf8', $this->user, $this->password);
 		return $this;
 	}
 	

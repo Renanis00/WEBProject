@@ -1,13 +1,12 @@
 <?php
 
-include_once '../Conexao.php';
+include_once '../conexao.php';
 
-class Atores{
+class Ator{
 
     protected $id_ator;
     protected $nome_ator;
     protected $filmes_ator;
-
 
     /**
      * @return mixed
@@ -34,7 +33,7 @@ class Atores{
     }
 
     /**
-     * @param mixed $nome_ator
+     * @param mixed $nome
      */
     public function setNome($nome_ator)
     {
@@ -50,7 +49,7 @@ class Atores{
     }
 
     /**
-     * @param mixed $filmografia_ator
+     * @param mixed $filmes
      */
     public function setFilmes($filmes_ator)
     {
@@ -63,18 +62,20 @@ class Atores{
         $filmes_ator = $dados['filmes_ator'];
 
         $conexao = new Conexao();
-        $sql = "insert into ator (nome_ator, filmografia_ator) values ('$nome_ator', '$filmes_ator')";
+        $sql = "insert into ator (nome_ator, filmes_ator) values ('$nome_ator', '$filmes_ator')";
 
         return $conexao->executar($sql);
     }
 
     public function alterar($dados)
     {
-        $nome = $dados['nome'];
         $id_ator = $dados['id_ator'];
+        $nome_ator = $dados['nome_ator'];
+        $filmes_ator = $dados['filmes_ator'];
 
         $sql = "update ator set 
-                    nome = '$nome' 
+                    nome_ator = '$nome_ator'
+                    filmes_ator = '$filmes_ator' 
                 where id_ator = $id_ator";
 
         $conexao = new Conexao();
@@ -91,7 +92,7 @@ class Atores{
 
     public function recuperarTodos()
     {
-        $sql = "select * from ator";
+        $sql = "select * from ator order by nome_ator ASC";
 
         $conexao = new Conexao();
         return $conexao->recuperarTodos($sql);
@@ -99,12 +100,12 @@ class Atores{
 
     public function recuperarPorId($id_ator)
     {
-        $sql = "select * from ator where id_ator = $id_ator";
+        $sql = "select * from filmes where id_ator = $id_ator";
 
         $conexao = new Conexao();
         $dados = $conexao->recuperarTodos($sql);
 
-        $this->id_ator = $dados[0]['id_ator'];
+        $this->id_filme = $dados[0]['id_ator'];
         $this->nome_ator = $dados[0]['nome_ator'];
     }
 }

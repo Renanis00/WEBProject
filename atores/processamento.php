@@ -2,7 +2,7 @@
 
 include_once 'ator.php';
 
-$ator = new Atores();
+$ator = new Ator();
 
 switch ($_GET['acao']){
     case 'salvar':

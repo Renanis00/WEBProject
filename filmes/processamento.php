@@ -1,8 +1,8 @@
 <?php
 
-include_once 'filmes.php';
+include_once 'filme.php';
 
-$filme = new Filmes();
+$filme = new Filme();
 
 switch ($_GET['acao']){
     case 'salvar':

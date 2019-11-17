@@ -1,8 +1,7 @@
 <?php
 include_once 'ator.php';
 
-
-$ator = new Atores();
+$ator = new Ator();
 
 if(!empty($_GET['id_ator'])){
     $ator->recuperarPorId($_GET['id_ator']);
@@ -17,7 +16,7 @@ include_once '../cabecalho.php';
 
     		<div class="box box-danger">
     			<div class="box-header with-border">
-    				<h3 class="box-title">Atores</h3>
+    				<h3 class="box-title">Ator / Atriz</h3>
     			</div>
     			<div class="box-body">
     				<div class="row">
@@ -27,15 +26,15 @@ include_once '../cabecalho.php';
                                 <input type="hidden" name="id_ator" id="id_ator" value="<?php echo $ator->getIdAtor(); ?>">
 
                                 <div class="form-group row">
-                                    <label for="nome_ator" class="col-sm-2 col-form-label">Nome</label>
+                                    <label for="nome_ator" class="col-sm-1 col-form-label">Nome</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="nome" id="nome" value="<?php echo $ator->getNome(); ?>">
-                                        </div>
+                                        <input type="text" class="form-control" name="nome_ator" id="nome_ator" value="<?php echo $ator->getNome(); ?>">
                                     </div>
+                                 </div>   
                                 <div class="form-group row">
-                                    <label for="filmografia_ator" class="col-sm-2 col-form-label">Filmografia</label>
+                                    <label for="filmes_ator" class="col-sm-1 col-form-label">Filmes</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="filmes" id="filmes" value="<?php echo $ator->getFilmes(); ?>">
+                                        <input type="text" class="form-control" name="filmes_ator" id="filmes_ator" value="<?php echo $ator->getFilmes(); ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">

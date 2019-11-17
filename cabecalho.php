@@ -91,9 +91,9 @@
         <!-- Logo -->
         <a href="index2.html" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LT</span>
+            <span class="logo-mini"><b>Cine</b></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Cinematic</b>LTE</span>
+            <span class="logo-lg"><b>Cinematic</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -379,18 +379,23 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li>
-                    <a href="../atores/index.php">
-                        <i class="fa fa-th"></i> <span>Atores</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../empresa/index.php">
-                        <i class="fa fa-th"></i> <span>Empresas</span>
-                    </a>
-                </li>
-                <li>
                     <a href="../filmes/index.php">
                         <i class="fa fa-th"></i> <span>Filmes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../atores/index.php">
+                        <i class="fa fa-th"></i> <span>Atores / Atrizes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../generos/index.php">
+                        <i class="fa fa-th"></i> <span>Gêneros</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../classificacao/index.php">
+                        <i class="fa fa-th"></i> <span>Classificação Indicativa</span>
                     </a>
                 </li>
             </ul>

@@ -1,8 +1,8 @@
 <?php
 
-include_once 'filmes.php';
+include_once 'filme.php';
 
-$filmes = Filmes::recuperarTodos();
+$filmes = Filme::recuperarTodos();
 
 include_once '../cabecalho.php';
 ?>
@@ -12,7 +12,7 @@ include_once '../cabecalho.php';
 
     		<div class="box box-danger">
     			<div class="box-header with-border">
-    				<h3 class="box-title">Filmes</h3>
+    				<h3 class="box-title">Filme</h3>
     			</div>
     			<div class="box-body">
     				<div class="row">
@@ -24,28 +24,19 @@ include_once '../cabecalho.php';
                                     <td>Ações</td>
                                     <td>ID</td>
                                     <td>Título</td>
-                                    <td>Ano de lançamento</td>
-                                    <td>Estudio</td>
-                                    <td>Gênero</td>
-                                    <td>Classificação</td>
-
+                                    <td>Data de lançamento</td>
                                 </tr>
                                 <?php
                                 foreach ($filmes as $filme) {
-                                    // print_r($funcionario);
-                                    // die;
                                     echo "
                 <tr>
                     <td>
                         <a class='trash' href='processamento.php?acao=deletar&id_filme={$filme['id_filme']}'><scan class='fa fa-trash'></scan></a>
-                        <a href='formulario.php?id_filme={$filme['id_filme']}'><scan class='fa fa-edit'></scan></a>
+                        <a href='formulario.php?id_cargo={$filme['id_filme']}'><scan class='fa fa-edit'></scan></a>
                     </td>
                     <td>{$filme['id_filme']}</td>
                     <td>{$filme['nome_filme']}</td>
                     <td>{$filme['ano_filme']}</td>
-                    <td>{$filme['estudio_filme']}</td>
-                    <td>{$filme['genero_filme']}</td>
-                    <td>{$filme['classif_filme']}</td>
                 </tr>
             ";
                                 }
