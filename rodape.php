@@ -18,26 +18,27 @@
 <!-- ./wrapper -->
 
 <script>
+    $(function() {
 
-    $(function(){
-        
-         $('.trash').click(function(){
-            
+        $('.trash').click(function() {
+
             swal({
-                title: "Are you sure?",
-                text: "Once deleted, you will not be able to recover this imaginary file!",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this imaginary file!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
                 })
-            .then((willDelete) => {
-            if (willDelete) {
-                window.location.href = $(this).prop('href');
-                }
-        }); return false;
+                .then((willDelete) => {
+                    if (willDelete) {
+                        window.location.href = $(this).prop('href');
+                    }
+                });
+            return false;
+        })
     })
-})
 </script>
 
 </body>
+
 </html>
