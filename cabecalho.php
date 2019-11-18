@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,74 +85,77 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+    <div class="wrapper">
 
-    <header class="main-header">
-        <!-- Logo -->
-        <a href="" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>Cine</b></span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Cinematic</b></span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top">
-            <!-- Sidebar toggle button-->
-            
 
-            <div text-align: center;>  <!--  inserir texto topo do site-->
 
-            </div>
+<header class="main-header">
+            <!-- Logo -->
+            <a href="index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>Cine</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Cinematic</b></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
 
-            
-        </nav>
-    </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-            <!-- Sidebar user panel -->
-
-            <!-- search form -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search...">
-                    <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
+                <div class="navbar-custom-menu">
+                    
                 </div>
-            </form>
-            <!-- /.search form -->
-            <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu" data-widget="tree">
-                <li>
-                    <a href="../filmes/index.php">
-                        <i class="fa fa-th"></i> <span>Filmes</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../atores/index.php">
-                        <i class="fa fa-th"></i> <span>Atores / Atrizes</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../generos/index.php">
-                        <i class="fa fa-th"></i> <span>Gêneros</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../classificacao/index.php">
-                        <i class="fa fa-th"></i> <span>Classificação Indicativa</span>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <!-- /.sidebar -->
-    </aside>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+               
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                <!-- /.search form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li>
+                        <a href="../filmes/index.php">
+                            <i class="fa fa-th"></i> <span>Filmes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../atores/index.php">
+                            <i class="fa fa-th"></i> <span>Atores / Atrizes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../generos/index.php">
+                            <i class="fa fa-th"></i> <span>Gêneros</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../classificacao/index.php">
+                            <i class="fa fa-th"></i> <span>Classificação Indicativa</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Main content -->
-        <section class="content">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content">
