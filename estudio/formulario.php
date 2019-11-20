@@ -1,10 +1,10 @@
 <?php
-include_once 'ator.php';
+include_once 'estudio.php';
 
-$ator = new Ator();
+$estudio = new Estudio();
 
-if(!empty($_GET['id_ator'])){
-    $ator->recuperarPorId($_GET['id_ator']);
+if(!empty($_GET['id_estudio'])){
+    $estudio->recuperarPorId($_GET['id_estudio']);
 }
 
 
@@ -16,22 +16,24 @@ include_once '../cabecalho.php';
 
     		<div class="box box-danger">
     			<div class="box-header with-border">
-    				<h3 class="box-title">Ator / Atriz</h3>
+    				<h3 class="box-title">Gêneros</h3>
     			</div>
     			<div class="box-body">
     				<div class="row">
     					<div class="col-md-12">
                             <form action="processamento.php?acao=salvar" method="post">
 
-                                <input type="hidden" name="id_ator" id="id_ator" value="<?php echo $ator->getIdAtor(); ?>">
+                                <input type="hidden" name="id_estudio" id="id_estudio" value="<?php echo $estudio->getIdEstudio(); ?>">
 
-                                <div class="form-group row">    
+                                    <div class="form-group row">    
                                     <div class="col-md-4 mb-3">
-                                     <label for="ator">Nome</label>
-                                         <input type="text" class="form-control" name="ator" id="ator" placeholder="Nome da Atriz / Ator"  required value="<?php echo $ator->getNome(); ?>">
+                                     <label for="estudio">Estúdio</label>
+                                         <input type="text" class="form-control" name="estudio" id="estudio" placeholder="Gênero de filmes"  required value="<?php echo $estudio->getNome(); ?>">
                                     </div>
                                  </div>
 
+                               
+        
                                 <div class="form-group row">
                                     <div class="col-sm-10">
                                         <button type="submit" class="btn btn-success">Enviar</button>

@@ -1,11 +1,11 @@
 <?php
 
-include_once '../conexao.php';
+include_once '../Conexao.php';
 
 class Genero{
 
     protected $id_genero;
-    protected $nome_genero;
+    protected $genero;
 
     /**
      * @return mixed
@@ -28,25 +28,25 @@ class Genero{
      */
     public function getNome()
     {
-        return $this->nome_genero;
+        return $this->genero;
     }
 
     /**
      * @param mixed $nome
      */
-    public function setNome($nome_genero)
+    public function setNome($genero)
     {
-        $this->nome_genero = $nome_genero;
+        $this->genero = $genero;
     }
 
     
 
     public function inserir($dados)
     {
-        $nome_genero = $dados['nome_genero'];
-
         $conexao = new Conexao();
-        $sql = "insert into genero (nome_genero) values ('$nome_genero')";
+        $genero = $dados['genero'];
+
+        $sql = "insert into genero (genero) values ('$genero')";
 
         return $conexao->executar($sql);
     }
@@ -54,10 +54,10 @@ class Genero{
     public function alterar($dados)
     {
         $id_genero = $dados['id_genero'];
-        $nome_genero = $dados['nome_genero'];
+        $genero = $dados['genero'];
 
         $sql = "update genero set 
-                    nome_genero = '$nome_genero'
+                    genero = '$genero'
                 where id_genero = $id_genero";
 
         $conexao = new Conexao();
@@ -74,7 +74,9 @@ class Genero{
 
     public function recuperarTodos()
     {
-        $sql = "select * from genero order by nome_genero ASC";
+        $sql = "
+
+        select * from genero order by genero ASC";
 
 
         $conexao = new Conexao();
@@ -83,12 +85,13 @@ class Genero{
 
     public function recuperarPorId($id_genero)
     {
+        $conexao = new Conexao();
         $sql = "select * from genero where id_genero = $id_genero";
 
-        $conexao = new Conexao();
+        
         $dados = $conexao->recuperarTodos($sql);
 
         $this->id_filme = $dados[0]['id_genero'];
-        $this->nome_genero = $dados[0]['nome_genero'];
+        $this->genero = $dados[0]['genero'];
     }
 }

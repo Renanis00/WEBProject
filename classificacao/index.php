@@ -35,7 +35,7 @@ include_once '../cabecalho.php';
                         <a href='formulario.php?id_classificacao={$classificacao['id_classificacao']}'><scan class='fa fa-edit'></scan></a>
                     </td>
                     <td>{$classificacao['id_classificacao']}</td>
-                    <td>{$classificacao['nome_classificacao']}</td>
+                    <td>{$classificacao['classificacao']}</td>
                 </tr>
             ";
                                 }

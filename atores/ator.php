@@ -5,8 +5,7 @@ include_once '../conexao.php';
 class Ator{
 
     protected $id_ator;
-    protected $nome_ator;
-    protected $filmes_ator;
+    protected $ator;
 
     /**
      * @return mixed
@@ -29,40 +28,25 @@ class Ator{
      */
     public function getNome()
     {
-        return $this->nome_ator;
+        return $this->ator;
     }
 
     /**
      * @param mixed $nome
      */
-    public function setNome($nome_ator)
+    public function setNome($ator)
     {
-        $this->nome_ator = $nome_ator;
+        $this->ator = $ator;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getFilmes()
-    {
-        return $this->filmes_ator;
-    }
-
-    /**
-     * @param mixed $filmes
-     */
-    public function setFilmes($filmes_ator)
-    {
-        $this->filmes_ator = $filmes_ator;
-    }
 
     public function inserir($dados)
-    {
-        $nome_ator = $dados['nome_ator'];
-        $filmes_ator = $dados['filmes_ator'];
-
+    {   
         $conexao = new Conexao();
-        $sql = "insert into ator (nome_ator, filmes_ator) values ('$nome_ator', '$filmes_ator')";
+        $ator = $dados['ator'];
+
+        
+        $sql = "insert into ator (ator) values ('$ator')";
 
         return $conexao->executar($sql);
     }
@@ -84,17 +68,24 @@ class Ator{
 
     public function deletar($id_ator)
     {
-        $sql = "delete from ator where id_ator = $id_ator";
-
         $conexao = new Conexao();
+
+        $sql = "SET foreign_key_checks = 0;  
+        delete from ator WHERE id_ator='$id_ator';
+        set foreign_key_checks = 1;";
+
         $conexao->executar($sql);
     }
 
     public function recuperarTodos()
-    {
-        $sql = "select * from ator order by nome_ator ASC";
-
+    {   
         $conexao = new Conexao();
+        $sql = "select  a.id_ator, a.ator, f.titulo FROM ator a
+        JOIN filmes f
+        ON a.id_ator = f.atorfk
+        ORDER BY ator";
+
+        
         return $conexao->recuperarTodos($sql);
     }
 

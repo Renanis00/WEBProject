@@ -1,0 +1,1 @@
+insert into genero (genero) values ("Ação")

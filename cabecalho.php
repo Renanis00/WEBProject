@@ -118,17 +118,8 @@
                 <!-- Sidebar user panel -->
                
                 <!-- search form -->
-                <form action="#" method="get" class="sidebar-form">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                            </button>
-                        </span>
-                    </div>
-                </form>
-                <!-- /.search form -->
-                <!-- sidebar menu: : style can be found in sidebar.less -->
+               
+
                 <ul class="sidebar-menu" data-widget="tree">
                     <li>
                         <a href="../filmes/index.php">
@@ -143,6 +134,22 @@
                     <li>
                         <a href="../generos/index.php">
                             <i class="fa fa-th"></i> <span>Gêneros</span>
+                        </a>
+                    </li>
+                    <li>
+                    <li>
+                        <a href="../diretor/index.php">
+                            <i class="fa fa-th"></i> <span>Diretores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pedidos/index.php">
+                            <i class="fa fa-th"></i> <span>Sugestão de Títulos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../estudio/index.php">
+                            <i class="fa fa-th"></i> <span>Estúdios</span>
                         </a>
                     </li>
                     <li>

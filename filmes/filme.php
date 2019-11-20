@@ -5,11 +5,14 @@ include_once '../conexao.php';
 class Filme{
 
     protected $id_filme;
-    protected $nome_filme;
-    protected $ano_filme;
-    protected $estudio_filme;
-    protected $genero_filme;
-    protected $classificacao_filme;
+    protected $titulo;
+    protected $data;
+    protected $genero;
+    protected $atorfk;
+    protected $classificacaofk;
+    protected $diretorfk;
+    protected $estudiofk;
+
 
     /**
      * @return mixed
@@ -30,53 +33,124 @@ class Filme{
     /**
      * @return mixed
      */
-    public function getNome()
+    public function getTitulo()
     {
-        return $this->nome_filme;
+        return $this->titulo;
     }
 
     /**
      * @param mixed $nome
      */
-    public function setNome($nome_filme)
+    public function setTitulo($titulo)
     {
-        $this->nome_filme = $nome_filme;
+        $this->titulo = $titulo;
     }
 
     /**
      * @return mixed
      */
-    public function getAno()
+    public function getData()
     {
-        return $this->ano_filme;
+        return $this->data;
     }
 
     /**
-     * @param mixed $ano
+     * @param mixed $data
      */
-    public function setAno($ano_filme)
+    public function setData($data)
     {
-        $this->ano_filme = $ano_filme;
+        $this->data = $data;
+    }
+
+    public function getGenerofk()
+    {
+        return $this->genero;
+    }
+
+    /**
+     * @param mixed $genero
+     */
+    public function setGenerofk($genero)
+    {
+        $this->genero = $genero;
+    }
+
+    public function getClassificacaofk()
+    {
+        return $this->classificacaofk;
+    }
+
+    /**
+     * @param mixed $classificacaofk
+     */
+    public function setClassificacaofk($classificacaofk)
+    {
+        $this->classificacaofk = $classificacaofk;
+    }
+
+    public function getDiretorfk()
+    {
+        return $this->diretorfk;
+    }
+
+    /**
+     * @param mixed $diretorfk
+     */
+    public function setDiretorfk($diretorfk)
+    {
+        $this->diretorfk = $diretorfk;
+    }
+
+    public function getEstudiofk()
+    {
+        return $this->estudiofk;
+    }
+
+    /**
+     * @param mixed $estudiofk
+     */
+    public function setEstudiofk($estudiofk)
+    {
+        $this->estudiofk = $estudiofk;
+    }
+
+    public function getAtorfk()
+    {
+        return $this->atorfk;
+    }
+
+    /**
+     * @param mixed $atorfk
+     */
+    public function setAtorfk($atorfk)
+    {
+        $this->atorfk = $atorfk;
     }
 
     public function inserir($dados)
     {
-        $nome_filme = $dados['nome_filme'];
-        $ano_filme = $dados['ano_filme'];
-
         $conexao = new Conexao();
-        $sql = "insert into filmes (nome_filme, ano_filme) values ('$nome_filme', '$ano_filme')";
+        $titulo = $dados['titulo'];
+        $data = $dados['data'];
+        $genero = $dados['generofk'];
+        $atorfk = $dados['atorfk'];
+        $classificacaofk = $dados['classificacaofk'];
+        $diretorfk = $dados['diretorfk'];
+        $estudiofk = $dados['estudiofk'];
+
+        
+        $sql = "insert filmes (titulo, data, generofk, atorfk, classificacaofk, diretorfk, estudiofk) values ('$titulo', '$data', '$genero', '$atorfk', '$classificacaofk', '$diretorfk', '$estudiofk')";
 
         return $conexao->executar($sql);
     }
-
+ 
     public function alterar($dados)
     {
-        $nome = $dados['nome_filme'];
+        $nome = $dados['titulo'];
         $id_filme = $dados['id_filme'];
 
         $sql = "update filmes set 
-                    nome_filme = $nome_filme 
+                    titulo = $titulo 
                 where id_filme = $id_filme";
 
         $conexao = new Conexao();
@@ -84,24 +158,36 @@ class Filme{
     }
 
     public function deletar($id_filme)
-    {
+ {
+        $conexao = new Conexao();
         $sql = "delete from filmes where id_filme = $id_filme";
 
-        $conexao = new Conexao();
         $conexao->executar($sql);
     }
 
+
     public function recuperarTodos()
     {
-        $sql = "select * from filmes";
-
         $conexao = new Conexao();
+        $sql = "select f.id_filme, f.titulo, f.data, g.genero, c.classificacao, d.diretor, e.estudio, a.ator FROM filmes f
+            JOIN genero g
+            ON g.id_genero = f.generofk
+            JOIN classificacao c
+            ON c.id_classificacao = f.classificacaofk
+            JOIN diretor d
+            ON d.id_diretor = f.diretorfk
+            JOIN estudio e
+            ON e.id_estudio = f.estudiofk
+            JOIN ator a
+            ON a.id_ator = f.atorfk";
+
+       
         return $conexao->recuperarTodos($sql);
     }
 
     public function recuperarPorId($id_filme)
     {
-        $sql = "select * from cargo where id_filme = $id_filme";
+        $sql = "select * from filmes where id_filme = $id_filme";
 
         $conexao = new Conexao();
         $dados = $conexao->recuperarTodos($sql);

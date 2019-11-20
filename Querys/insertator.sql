@@ -1,0 +1,1 @@
+insert into ator (ator) values ("Michelle Rodrigues")

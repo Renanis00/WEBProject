@@ -25,12 +25,14 @@ include_once '../cabecalho.php';
 
                                 <input type="hidden" name="id_genero" id="id_genero" value="<?php echo $genero->getIdGenero(); ?>">
 
-                                <div class="form-group row">
-                                    <label for="nome_genero" class="col-sm-1 col-form-label">Gênero</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="nome_genero" id="nome_genero" value="<?php echo $genero->getNome(); ?>">
-                                        </div>
-                                    </div>    
+                                    <div class="form-group row">    
+                                    <div class="col-md-4 mb-3">
+                                     <label for="genero">Gênero</label>
+                                         <input type="text" class="form-control" name="genero" id="genero" placeholder="Gênero de filmes"  required value="<?php echo $genero->getNome(); ?>">
+                                    </div>
+                                 </div>
+
+                               
         
                                 <div class="form-group row">
                                     <div class="col-sm-10">

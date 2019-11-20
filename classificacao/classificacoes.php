@@ -74,7 +74,7 @@ class Classificacao{
 
     public function recuperarTodos()
     {
-        $sql = "select * from classificacoes order by id_classificacao ASC";
+        $sql = "select * from classificacao order by id_classificacao ASC";
 
 
         $conexao = new Conexao();
